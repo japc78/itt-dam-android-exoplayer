@@ -2,55 +2,69 @@ package itt.dam.android.actividad03_exoplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
-import com.google.android.exoplayer2.ExoPlayerFactory;
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.source.ExtractorMediaSource;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
-import com.google.android.exoplayer2.ui.PlayerView;
-import com.google.android.exoplayer2.upstream.DefaultDataSource;
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
-import com.google.android.exoplayer2.util.Util;
-
-import static com.google.android.exoplayer2.ExoPlayerFactory.newSimpleInstance;
-
-public class MainActivity extends AppCompatActivity {
-    private PlayerView playerView;
-    private SimpleExoPlayer player;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private EditText url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        playerView = findViewById(R.id.explayerId);
-    }
+        Button btnPlay  = findViewById(R.id.btnPlay);
+        Button btnDel  = findViewById(R.id.btnDel);
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        player = ExoPlayerFactory.newSimpleInstance(this, new DefaultTrackSelector());
-        playerView.setPlayer(player);
+        url = findViewById(R.id.urlId);
+//        url.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
 
-        DefaultDataSourceFactory dsf = new DefaultDataSourceFactory(this, Util.getUserAgent(this, "ExoPlayer"));
-
-        ExtractorMediaSource fileMedia = new ExtractorMediaSource.Factory(dsf)
-                .createMediaSource(Uri.parse("http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
-
-        player.prepare(fileMedia);
-        player.setPlayWhenReady(true);
+        btnPlay.setOnClickListener(this);
+        btnDel.setOnClickListener(this);
 
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnPlay:
+                String getUrl = url.getText().toString().trim();
 
-        playerView.setPlayer(null);
-        player.release();
-        player = null;
+                if (getUrl.isEmpty()) {
+                    message("Url no puede estar vacia");
 
+                } else if (!checkUrl(getUrl)){
+                    message("Url no valida");
+
+                } else {
+                    startActivity(new Intent(this, PlayerActivity.class)
+                            .putExtra("url", getUrl));
+                    url.setText("");
+                }
+
+                break;
+            case R.id.btnDel:
+                url.setText("");
+        }
+    }
+
+
+    private boolean checkUrl (String url) {
+        if ((url.toLowerCase().endsWith(".mp4") || url.toLowerCase().endsWith(".mp3")) && (url.startsWith("http://") || url.startsWith("https://")))
+            return true;
+        else
+            return false;
+    }
+
+    private void message (String text) {
+        Toast toast = Toast.makeText(this, text, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL,0,48);
+        toast.show();
     }
 }

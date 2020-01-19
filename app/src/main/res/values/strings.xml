@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">actividad03_exoPlayer</string>
+    <string name="app_name">ExoPlayer</string>
+    <string name="author">Juan Antonio Pavón Carmona\n ITT DAM</string>
+    <string name="inputUrlHint">Url del archivo MP3 o MP4 a reproducir</string>
+    <string name="logoContentDescription">Logo</string>
+    <string name="btnReproducirTxt">Reproducir</string>
+    <string name="btnBorrarTxt">Borrar</string>
 </resources>
