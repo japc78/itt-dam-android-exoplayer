@@ -12,12 +12,6 @@ Aplicación desarrollada con **Android Studio**, **`JAVA`** y [**`ExoPlayer`**](
 ![img 04](https://drive.google.com/uc?export=view&id=1oR5XAXyTwsVB9Gs6JhoF3EgIhcSsEwac)
 ![img 05](https://drive.google.com/uc?export=view&id=1cytvn29HjYF1spT5fZXiBmaFFbHLHXQG)
 ![img 06](https://drive.google.com/uc?export=view&id=1cNFktCx-WOB9_JioIIZbMKU0Gq3qBf8v)
-
-![Login](/doc/dam-android-todo-04.gif)
-![Registro](/doc/dam-android-todo-05.gif)
-![Crear tarea](/doc/dam-android-todo-01.gif)
-![Finalizar tareas](/doc/dam-android-todo-02.gif)
-![Historico](/doc/dam-android-todo-03.gif)
  
 ## Recursos
 - [FreePik](https://www.freepik.es/)
