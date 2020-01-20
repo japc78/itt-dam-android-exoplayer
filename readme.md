@@ -5,7 +5,6 @@ Personalizacion de controles y linea de tiempo.
 
 Aplicación desarrollada con **Android Studio**, **`JAVA`** y [**`ExoPlayer`**](https://exoplayer.dev/). 
 
-
 ![](https://drive.google.com/uc?export=view&id=1uiLjIBNwdVicKLQFjwKruYOhGBUyTZ-a)
 ![](https://drive.google.com/uc?export=view&id=1phq-NmO78ihNljzNQQaYlFWSoMU9AruL)
 ![](https://drive.google.com/uc?export=view&id=1aITD--ESiDd4ab08HocXuQ7TYn1cr5yT)
