@@ -5,12 +5,12 @@ Personalizacion de controles y linea de tiempo.
 
 Aplicación desarrollada con **Android Studio**, **`JAVA`** y [**`ExoPlayer`**](https://exoplayer.dev/). 
 
-![](https://drive.google.com/uc?export=view&id=1uiLjIBNwdVicKLQFjwKruYOhGBUyTZ-a)
-![](https://drive.google.com/uc?export=view&id=1phq-NmO78ihNljzNQQaYlFWSoMU9AruL)
-![](https://drive.google.com/uc?export=view&id=1aITD--ESiDd4ab08HocXuQ7TYn1cr5yT)
-![](https://drive.google.com/uc?export=view&id=1oR5XAXyTwsVB9Gs6JhoF3EgIhcSsEwac)
-![](https://drive.google.com/uc?export=view&id=1cytvn29HjYF1spT5fZXiBmaFFbHLHXQG)
-![](https://drive.google.com/uc?export=view&id=1cNFktCx-WOB9_JioIIZbMKU0Gq3qBf8v)
+![](/screenshot/dam-android-exoplayer-001.png)
+![](/screenshot/dam-android-exoplayer-002.png)
+![](/screenshot/dam-android-exoplayer-003.png)
+![](/screenshot/dam-android-exoplayer-004.png)
+![](/screenshot/dam-android-exoplayer-005.png)
+![](/screenshot/dam-android-exoplayer-006.png)
  
 ## Recursos
 - [FreePik](https://www.freepik.es/)
